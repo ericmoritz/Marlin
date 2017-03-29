@@ -580,7 +580,7 @@
 //  (0,0)
 #define X_PROBE_OFFSET_FROM_EXTRUDER -30
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 8
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.45
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.65
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -711,7 +711,7 @@
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
 
-#define min_software_endstops true  // If true, axis won't move to coordinates less than HOME_POS.
+#define min_software_endstops false  // If true, axis won't move to coordinates less than HOME_POS.
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 
 // @section machine
