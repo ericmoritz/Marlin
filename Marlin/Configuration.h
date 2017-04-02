@@ -358,9 +358,9 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define  DEFAULT_bedKp 196
-  #define  DEFAULT_bedKi 33
-  #define  DEFAULT_bedKd 290
+  #define  DEFAULT_bedKp 292.16
+  #define  DEFAULT_bedKi 23.97
+  #define  DEFAULT_bedKd 890.33
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -578,9 +578,9 @@
 //    |           |
 //    O-- FRONT --+
 //  (0,0)
-#define X_PROBE_OFFSET_FROM_EXTRUDER -30
-#define Y_PROBE_OFFSET_FROM_EXTRUDER 8
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0
+#define X_PROBE_OFFSET_FROM_EXTRUDER -8
+#define Y_PROBE_OFFSET_FROM_EXTRUDER 44
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.2
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -687,7 +687,7 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
+#define INVERT_X_DIR true // I installed the motor on the wrong side
 #define INVERT_Y_DIR false
 #define INVERT_Z_DIR true // The motors are upside down
 
@@ -808,10 +808,10 @@
   #define ABL_GRID_POINTS_Y ABL_GRID_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 30
-  #define RIGHT_PROBE_BED_POSITION 170
-  #define FRONT_PROBE_BED_POSITION 30
-  #define BACK_PROBE_BED_POSITION 180
+  #define LEFT_PROBE_BED_POSITION 0
+  #define RIGHT_PROBE_BED_POSITION 192
+  #define FRONT_PROBE_BED_POSITION 44
+  #define BACK_PROBE_BED_POSITION 200
 
   // The Z probe minimum outer margin (to validate G29 parameters).
   #define MIN_PROBE_EDGE 10
@@ -824,7 +824,7 @@
     // Gradually reduce leveling correction until a set height is reached,
     // at which point movement will be level to the machine's XY plane.
     // The height can be set with M420 Z<height>
-    #define ENABLE_LEVELING_FADE_HEIGHT
+    //#define ENABLE_LEVELING_FADE_HEIGHT
 
     // 
     // Experimental Subdivision of the grid by Catmull-Rom method.
@@ -842,12 +842,12 @@
 
   // 3 arbitrary points to probe.
   // A simple cross-product is used to estimate the plane of the bed.
-  #define ABL_PROBE_PT_1_X 15
-  #define ABL_PROBE_PT_1_Y 180
-  #define ABL_PROBE_PT_2_X 15
-  #define ABL_PROBE_PT_2_Y 20
-  #define ABL_PROBE_PT_3_X 170
-  #define ABL_PROBE_PT_3_Y 20
+  #define ABL_PROBE_PT_1_X 10
+  #define ABL_PROBE_PT_1_Y 190
+  #define ABL_PROBE_PT_2_X 10
+  #define ABL_PROBE_PT_2_Y 44
+  #define ABL_PROBE_PT_3_X 190
+  #define ABL_PROBE_PT_3_Y 44
 
 #endif
 
