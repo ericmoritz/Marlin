@@ -580,7 +580,7 @@
 //  (0,0)
 #define X_PROBE_OFFSET_FROM_EXTRUDER -30
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 8
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.6
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.4
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
