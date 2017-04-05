@@ -5,9 +5,10 @@
 #define TEMP_SENSOR_BED 1
 
 #define PIDTEMP
-#define  DEFAULT_Kp 19.40
-#define  DEFAULT_Ki 1.47
-#define  DEFAULT_Kd 63.90
+#define  DEFAULT_Kp 11.71
+#define  DEFAULT_Ki 0.67
+#define  DEFAULT_Kd 50.93
+
 
 #define PIDTEMPBED
 #define  DEFAULT_bedKp 292.16
@@ -115,7 +116,7 @@
 //  (0,0)
 #define X_PROBE_OFFSET_FROM_EXTRUDER -8
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 44
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.1
 
 
 #define Z_SAFE_HOMING
