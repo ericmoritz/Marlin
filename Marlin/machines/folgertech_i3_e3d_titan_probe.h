@@ -27,11 +27,11 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // set to true to invert the logic of the probe.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // set to true to invert the logic of the probe.
 
 /**
  * Default Axis Steps Per Unit (steps/mm)
@@ -114,9 +114,9 @@
 //    |           |
 //    O-- FRONT --+
 //  (0,0)
-#define X_PROBE_OFFSET_FROM_EXTRUDER -8
-#define Y_PROBE_OFFSET_FROM_EXTRUDER 44
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.70
+#define X_PROBE_OFFSET_FROM_EXTRUDER 3
+#define Y_PROBE_OFFSET_FROM_EXTRUDER -32
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.30
 
 
 #define Z_SAFE_HOMING
@@ -163,10 +163,10 @@
 
 #define GRID_MAX_POINTS_X 5
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
-#define LEFT_PROBE_BED_POSITION 0
-#define RIGHT_PROBE_BED_POSITION 192
-#define FRONT_PROBE_BED_POSITION 44
-#define BACK_PROBE_BED_POSITION 200
+#define LEFT_PROBE_BED_POSITION 15
+#define RIGHT_PROBE_BED_POSITION X_MAX_POS
+#define FRONT_PROBE_BED_POSITION 15
+#define BACK_PROBE_BED_POSITION 192-32
 #define MIN_PROBE_EDGE 10
 
 
