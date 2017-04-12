@@ -1579,5 +1579,5 @@
 
 #endif // CONFIGURATION_H
 
-#include "machines/folgertech_i3_e3d_titan_probe.h"
-//#include "machines/dupe_i3_e3d_bowden_probe.h"
+//#include "machines/folgertech_i3_e3d_titan_probe.h"
+#include "machines/dupe_i3_e3d_bowden_probe.h"
