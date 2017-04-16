@@ -1,6 +1,14 @@
 // Displayed in the LCD "Ready" message
 #define CUSTOM_MACHINE_NAME "Folgertech E3D Titan Probe"
 
+#define EEPROM_SETTINGS
+
+#if ENABLED(EEPROM_SETTINGS)
+  // To disable EEPROM Serial responses and decrease program space by ~1700 byte: comment this out:
+  #define EEPROM_CHITCHAT // Please keep turned on if you can.
+#endif
+
+
 #define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_BED 1
 
@@ -22,7 +30,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS 200
 #define Y_MAX_POS 200
-#define Z_MAX_POS 175
+#define Z_MAX_POS 150
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
@@ -53,7 +61,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 5, 1000 }
+#define DEFAULT_MAX_ACCELERATION      { 800, 800, 5, 1000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -63,7 +71,7 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
@@ -114,12 +122,13 @@
 //    |           |
 //    O-- FRONT --+
 //  (0,0)
-#define X_PROBE_OFFSET_FROM_EXTRUDER 3
-#define Y_PROBE_OFFSET_FROM_EXTRUDER -32
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.30
+#define X_PROBE_OFFSET_FROM_EXTRUDER -30
+#define Y_PROBE_OFFSET_FROM_EXTRUDER 8
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0
 
 
 #define Z_SAFE_HOMING
+
 #define Z_SAFE_HOMING_X_POINT ((X_MIN_POS + X_MAX_POS) / 2)    // X point for Z homing when homing all axis (G28).
 #define Z_SAFE_HOMING_Y_POINT ((Y_MIN_POS + Y_MAX_POS) / 2)    // Y point for Z homing when homing all axis (G28).
 
@@ -164,9 +173,9 @@
 #define GRID_MAX_POINTS_X 5
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 #define LEFT_PROBE_BED_POSITION 15
-#define RIGHT_PROBE_BED_POSITION X_MAX_POS
+#define RIGHT_PROBE_BED_POSITION X_MAX_POS-30
 #define FRONT_PROBE_BED_POSITION 15
-#define BACK_PROBE_BED_POSITION 192-32
+#define BACK_PROBE_BED_POSITION Y_MAX_POS
 #define MIN_PROBE_EDGE 10
 
 
