@@ -2,6 +2,13 @@
 // Displayed in the LCD "Ready" message
 #define CUSTOM_MACHINE_NAME "Duplicator E3D Titan Probe"
 
+#define EEPROM_SETTINGS
+
+#if ENABLED(EEPROM_SETTINGS)
+  // To disable EEPROM Serial responses and decrease program space by ~1700 byte: comment this out:
+  #define EEPROM_CHITCHAT // Please keep turned on if you can.
+#endif
+
 #define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_BED 1
 
@@ -53,7 +60,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 800, 100, 5000 }
+#define DEFAULT_MAX_ACCELERATION      { 800, 800, 100, 5000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -132,7 +139,7 @@
 //  (0,0)
 #define X_PROBE_OFFSET_FROM_EXTRUDER 3
 #define Y_PROBE_OFFSET_FROM_EXTRUDER -32
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.7
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0
 
 
 #define Z_SAFE_HOMING
